@@ -1,0 +1,258 @@
+:root {
+    --main-color: #006aff;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Open Sans', sans-serif;
+  }
+  header {
+    width: 100%;
+    height: 400px;
+    text-align: right;
+    list-style: none;
+    padding-left: 0;
+    background-image: url("../img/header.jpg");
+    color: #EEE;
+    padding: 20px;
+  }
+nav li {
+    display: inline-block;
+    margin-left: 10px;
+  }
+nav li a {
+    color: #FFF;
+    text-decoration: none;
+    transition: .3s;
+  }
+nav li a:hover,
+nav li a.active {
+    color: var(--main-color);
+  }
+
+.container {
+    /* width: 1170px; */
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+  }
+  /* Start About Us */
+.about-us {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+  }
+  @media (max-width: 767px) {
+    .about-us {
+      display: block;
+      text-align: center;
+    }
+  }
+  .about-us .info-box {
+    flex: 1;
+    padding: 30px;
+  }
+  @media (max-width: 767px) {
+    .about-us .info-box {
+      padding: 0;
+    }
+  }
+  .about-us .info-box h2 {
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-color);
+    margin: 0 0 10px;
+  }
+  .about-us .info-box p {
+    line-height: 1.6;
+    color: #767676;
+    margin:0;
+  }
+  .about-us img{
+    flex: 1;
+    text-align: center;
+  }
+  .about-us  img {
+    width: 250px;
+    border-radius: 50%;
+  }
+  /* End About Us */
+
+/* End About Us */
+/* Start Skills */
+.skills {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #EEE;
+  }
+  .skills h2 {
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-color);
+    margin: 0 0 50px;
+    text-align: center;
+  }
+  .skills .skill-box {
+    background-color: #FFF;
+    display: flex;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  @media (max-width: 767px) {
+    .skills .skill-box {
+      display: block;
+    }
+  }
+  .skills .skill-box .skill-name {
+    font-weight: bold;
+    width: 140px;
+    text-align: center;
+    line-height: 30px;
+  }
+  @media (max-width: 767px) {
+    .skills .skill-box .skill-name {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+  .skills .skill-box .skill-progress {
+    height: 30px;
+    width: 100%;
+    background-color: #f6f6f6;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+  }
+  .skills .skill-box .skill-progress span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    transition: all .5s;
+  }
+  /* End Skills */
+  /* Start Contact Us */
+.contact {
+    min-height: 600px;
+    background-image: url('../imgs/contact.png');
+    background-size: cover;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    position: relative;
+  }
+  .contact .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .6);
+    /* background-color: rgb(255 255 255 / 60%); */
+  }
+  .contact .container {
+    position: relative;
+    z-index: 2;
+  }
+  .contact h2 {
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-color);
+    margin: 0 0 60px;
+    text-align: center; 
+  }
+  .contact form {
+    overflow: hidden;
+    max-width: 800px;
+    margin: auto;
+  }
+  .contact form .left {
+    float: left;
+    width: 49%;
+  }
+  .contact form .right {
+    float: right;
+    width: 49%;
+  }
+  @media (max-width: 767px) {
+    .contact form .left,
+    .contact form .right {
+      float: none;
+      width: 100%;
+    }
+  }
+  .contact form input:not([type="submit"]),
+  .contact form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #CCC;
+    background-color: rgba(218, 218, 218, 0.19);
+  }
+  .contact form input:not([type="submit"]):focus,
+  .contact form textarea:focus { 
+    outline: 1px solid var(--main-color);
+  }
+  .contact form input {
+    height: 40px;
+  }
+  .contact form textarea {
+    height: 150px;
+  }
+  .contact form input[type="submit"] {
+    padding: 10px;
+    width: 100%;
+    border-color: transparent;
+    background-color: var(--main-color);
+    color: #FFF;
+    cursor: pointer;
+  }
+  .contact form textarea:focus::-webkit-input-placeholder,
+  .contact form input:not([type="submit"]):focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: .3s;
+  }
+  .contact form textarea:focus:-ms-input-placeholder,
+  .contact form input:not([type="submit"]):focus:-ms-input-placeholder {
+    opacity: 0;
+    transition: .3s;
+  }
+  .contact form textarea:focus::placeholder,
+  .contact form input:not([type="submit"]):focus::placeholder {
+    opacity: 0;
+    transition: .3s;
+  }
+  /* End Contact Us */
+  /* Start Footer */
+  .footer {
+    background-color: #333;
+    color: #EEE;
+    padding: 20px;
+    text-align: center;
+  }
+  /* End Footer */
+  /* Start Grid System */
+  @media (min-width: 576px) { /* Small Devices => Landscape Phones */
+    .container {
+      max-width: 540px;
+    }
+  }
+  @media (min-width: 768px) { /* Medium Devices => Tablets */
+    .container {
+      max-width: 720px;
+    }
+  }
+  @media (min-width: 992px) { /* Desktops */
+    .container {
+      max-width: 960px;
+    }
+  }
+  @media (min-width: 1200px) { /* Large Screens */
+    .container {
+      max-width: 1140px;
+    }
+  }
+  /* End Grid System */
